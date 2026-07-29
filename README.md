@@ -13,12 +13,12 @@ Vite will print the local URL, normally `http://localhost:5173`.
 
 ## GitHub Pages
 
-The production build uses `/Interview_simulator/` as its public base path. Pushes
-to `main` trigger `.github/workflows/deploy-pages.yml`, which builds the app and
-deploys `dist` through GitHub Pages.
+The production build uses `/Interview_simulator/` as its public base path.
+`npm run build` writes the normal `dist` artifact and refreshes the compiled
+root `index.html` and `assets/` files used by branch-based GitHub Pages.
 
-For `ajhoagland2/Interview_simulator`, set **Settings → Pages →
-Build and deployment → Source** to **GitHub Actions**.
+The included GitHub Actions workflow can also deploy `dist` if the repository's
+Pages source is later changed to **GitHub Actions**.
 
 ## Quality checks
 
